@@ -11,65 +11,31 @@ function turnAround()
 	turnleft();
 end
 
-function checkAhead()
+function checkWalls()
 	if front_is_clear()
 	then
 		move();
-	end
-end
-
-function checkLeft()
-	if left_is_clear()
-	then
-		turnleft();
-		move();
-	end
-
-end
-
-function checkRight()
-
-	if right_is_clear()
-	then
-		rightTurn();
-		move();
-	end
-
-end
-
-
-function deadEnd()
-	if right_is_blocked()
-	then
-		if front_is_blocked()
+	elseif left_is_clear()
 		then
-			if left_is_blocked()
+			turnleft();
+			move();
+		elseif right_is_clear()
 			then
-				turnAround();
+				rightTurn();
 				move();
 			end
-		end
-	end
+
 end
 
-function mazeRunner()
-	for i = 1, 6, -1
-	do
-		checkAhead();
-		checkLeft();
-		checkRight();
-		deadEnd();
-	end
-end
+
 
 function main()
-	move();
-	if not_next_to_a_beeper()
-	then
-		mazeRunner();
+	for i = 1, 9
+	do
+		checkWalls()
 		if next_to_a_beeper()
-			then
-				pickbeeper();
+		then
+			pickbeeper();
 		end
 	end
 	turnoff();

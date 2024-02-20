@@ -33,10 +33,10 @@ function main()
 	for i = 1, 9
 	do
 		checkWalls()
-		-- if next_to_a_beeper()
-		-- then
-		-- 	pickbeeper();
-		-- end
+		if next_to_a_beeper()
+		then
+			pickbeeper();
+		end
 	end
 	turnoff();
 end
