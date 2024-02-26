@@ -6,37 +6,39 @@ world = {}
 
 beepers = {
 	-- at1_1 = 1,
-	-- at1_3 = 1,
-	-- at1_4 = 1,
+	at1_3 = 1,
+	at1_4 = 1,
 
-	-- at2_1 = 1,
-	-- at2_4 = 1,
+  at1_2 = 1,
+
+	at2_1 = 1,
+	at2_4 = 1,
 
 
-  -- at3_1 = 1,
+  at3_1 = 1,
   -- at3_3 =1,
-	-- at3_4 = 1,
+	at3_4 = 1,
 
 
-  -- at4_1 = 1,
-  -- at4_2 = 1,
-	-- at4_3 = 1,
-	-- at4_4 = 1
+  at4_1 = 1,
+  at4_2 = 1,
+	at4_3 = 1,
+	at4_4 = 1
 
 }
 
 walls = {
-	-- eastOf1_1 = 1,
-  -- eastOf1_2 = 1,
-  -- eastOf1_3 = 1
+	eastOf1_1 = 1,
+  eastOf1_2 = 1,
+  eastOf1_3 = 1
 
 }
 
 robot = {
     on=true,
-    x=2,
-    y=2,
-    rot='e',
+    x=1,
+    y=1,
+    rot='n',
     beepers=0
 }
 
