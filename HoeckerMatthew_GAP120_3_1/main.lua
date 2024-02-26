@@ -42,7 +42,8 @@ end
 function whereWalls()
     if (right_is_blocked())
     then
-        if left_is_clear() then
+        if left_is_clear() 
+        then
             turnleft();
             move();
     elseif (left_is_blocked())
@@ -51,7 +52,8 @@ function whereWalls()
         then
             rightTurn();
             move();
-    elseif front_is_blocked()   then
+    elseif front_is_blocked()   
+    then
         turnAround();
         move();
     end
